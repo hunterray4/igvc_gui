@@ -4,7 +4,7 @@ import rospy
 # from pacmod_msgs.msg import PacmodCmd, PositionWithSpeed, SystemRptInt
 # from sensor_msgs.msg import Joy
 
-driveParameters = rospy.Publisher('/driveParameters', Int64, queue_size=1)
+driveParameters = rospy.Publisher('/driveParameters', Int8, queue_size=1)
 
 pygame.init()
 surface = pygame.display.set_mode((1000, 800))
