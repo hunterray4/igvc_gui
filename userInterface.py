@@ -1,6 +1,6 @@
 import pygame, pygame_menu
 import rospy
-# from std_msgs.msg import Int8, UInt16MultiArray, Float64, Bool
+from std_msgs.msg import Int8, UInt16MultiArray, Float64, Bool
 # from pacmod_msgs.msg import PacmodCmd, PositionWithSpeed, SystemRptInt
 # from sensor_msgs.msg import Joy
 
