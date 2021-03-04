@@ -13,24 +13,22 @@ surface = pygame.display.set_mode((1000, 800))
 def set_driveMode(value1, driveMode):
     drive_pub.publish(driveMode)
     print(value1)
-    pass
 
 
 def set_run_modes(value2, run_modes):
     run_pub.publish(run_modes)
     print(value2)
-    # Do the job here !
-        pass
 
+
+##HELLOOO
 
 def start_the_game():
     drive_pub.publish(driveMode)
     run_pub.publish(run_modes)
-    pass
 
 menu = pygame_menu.Menu(800, 1000, 'AVRAD User Interface', theme=pygame_menu.themes.THEME_GREEN)
 
-menu.add_selector('Drive Mode :', [('Manuel Drive', 0), ('Tele-Op', 1), ('Autonomous Self-Drive', 2)], onchange=set_driveMode)
+menu.add_selector('Drive Mode :', [('Manual Drive', 0), ('Tele-Op', 1), ('Autonomous Self-Drive', 2)], onchange=set_driveMode)
 menu.add_selector('Run Mode :', [('NOT AUTONOMOUS MODE', 6), ('Regular Self-drive', 0), ('E-Stop Qualification', 1), ('Straight Lane Keeping Qualification', 2), 
         ('Left Turn Qualification', 3), ('Right Turn Qualification', 4), ('Stop Sign Detection Qualification', 5)], onchange=set_run_modes)
 menu.add_button('Run', start_the_game)
